@@ -1,0 +1,32 @@
+/* GallerySection.css */
+@keyframes fadeInOut {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  20%,
+  80% {
+    opacity: 1;
+  }
+}
+
+.fade {
+  position: relative; /* Add this to allow absolute positioning within */
+  animation: fadeInOut 5s ease-in-out infinite;
+}
+
+.fade:hover {
+  animation: none; /* Disable animation on hover */
+}
+
+.fade:hover .bg-black {
+  opacity: 0; /* Make the black background transparent on hover */
+}
+
+.bg-black {
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  opacity: 0.75;
+  transition: opacity 0.3s ease; /* Add a transition for a smoother effect */
+}
